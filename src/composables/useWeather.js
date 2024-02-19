@@ -13,7 +13,7 @@ export default function useWeather() {
     //Get latitude and logitude
     weather.value = {};
     try {
-      const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=${key}`;
+      const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=${key}`;
       const { data } = await axios(url);
       const { lat, lon } = data[0];
       //Get Weather
